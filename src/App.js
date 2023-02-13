@@ -8,7 +8,7 @@ function App() {
         {/* PROFILE & MENU */}        
         <aside className='col-12 col-lg-3 mt-5 d-flex align-items-center text-center' id='sideMenu'>
           <div className='profile'>
-            <a href='/'><img src='/fav.png' alt='' /></a>
+            <a href='/'><img src='fav.png' alt='' /></a>
             <a href='/'><h1 className='display-5'>HANG CHUNG</h1></a>
             <h3>WEB DEVELOPER</h3>
           </div>
@@ -42,7 +42,7 @@ function App() {
               </div>
             </div>
             <div className='about-img'>
-              <img src='/imgs/Subject.png' alt='' />
+              <img src='imgs/Subject.png' alt='' />
             </div>
           </div>
           <div className='section-about' id='section-about'>
@@ -139,7 +139,7 @@ function App() {
                   <p><small>URL: <a href='https://ctth1302.github.io/my-portfolio/'>Hang's Portfolio</a></small></p>
                 </div>
                 <div className='col'>
-                  <img src='/imgs/myPortfolio.png' alt='' />
+                  <img src='imgs/myPortfolio.png' alt='' />
                 </div>
                 <div className='col'>
                   <p><small>Description: A personal website showcasing my skills, projects, and experiences</small></p>
@@ -156,7 +156,7 @@ function App() {
                   <p><small>URL: <a href='https://www.tbmango.com.au'>TBMango Pty Ltd</a></small></p>
                 </div>
                 <div className='col'>
-                  <img src='/imgs/TBMango.png' alt='' />
+                  <img src='imgs/TBMango.png' alt='' />
                 </div>
                 <div className='col'>
                   <p><small>Description: A website for an immigration services company to offer a self immigration point calculator and to collect its client's information before consultation, utilizing Wix platform and Velo's APIs including:
@@ -179,7 +179,7 @@ function App() {
                   <p><small>URL: <a href='https://4bio.com.au/'>4BIO Shop</a></small></p>
                 </div>
                 <div className='col'>
-                  <img src='/imgs/4bio.png' alt='' />
+                  <img src='imgs/4bio.png' alt='' />
                 </div>
                 <div className='col'>
                   <p><small>Description: A e-commerce platform for environmental friendly brands to offer their products to end users, built using Shopify</small></p>
@@ -196,8 +196,8 @@ function App() {
                   <p><small>URL: <a href='/'>A content management system for an e-commerce website</a></small></p>
                 </div>
                 <div className='col'>
-                  <img src='/imgs/uni_admin.png' alt='' />
-                  <img src='/imgs/uni_manager.png' alt='' />
+                  <img src='imgs/uni_admin.png' alt='' />
+                  <img src='imgs/uni_manager.png' alt='' />
                 </div>
                 <div className='col'>
                   <p><small>Project's Requirements:
