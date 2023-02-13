@@ -136,7 +136,7 @@ function App() {
                   <p><strong>Portfolio Website</strong></p>
                 </div>
                 <div className='col'>
-                  <p><small>URL: Hang's Portfolio</small></p>
+                  <p><small>URL: <a href="https://ctth1302.github.io/my-portfolio/"></a> Hang's Portfolio</small></p>
                 </div>
                 <div className='col'>
                   <img src='/imgs/myPortfolio.png' alt='' />
