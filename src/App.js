@@ -1,11 +1,20 @@
 import './App.css';
 import ResumeDownload from './download';
+import useLocalStorage from 'use-local-storage';
 
 function App() {
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+  const switchTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  }
+
   return (
     <main>
-      <div className='d-flex main-body mobile-view'>
-        {/* PROFILE & MENU */}        
+      <div className='d-flex main-body mobile-view' data-theme={theme}>
+        {/* PROFILE & MENU */}
         <aside className='col-12 col-lg-3 d-flex align-items-center text-center' id='sideMenu'>
           <div className='profile'>
             <a href='https://ctth1302.github.io/my-portfolio/'><img src='./fav.png' alt='' /></a>
@@ -13,42 +22,46 @@ function App() {
             <h3>WEB DEVELOPER</h3>
           </div>
           <div className='navbar-desktop'>
-          <nav className='navbar'>
-            <ul className='nav'>
-              <li className='nav-item'>
-                <a className='nav-link' aria-current='page' href='#section-home'>Home</a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='#section-about'>About Me</a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='#section-projects'>Projects</a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='#section-contact'>Contact Me</a>
-              </li>
-            </ul>
-          </nav>
+            <nav className='navbar'>
+              <ul className='nav'>
+                <li className='nav-item'>
+                  <a className='nav-link' aria-current='page' href='#section-home'>Home</a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#section-about'>About Me</a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#section-projects'>Projects</a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#section-contact'>Contact Me</a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           <div className='navbar-mobile'>
-          <nav className='navbar'>
-            <ul className='nav'>
-              <li className='nav-item'>
-                <a className='nav-link' aria-current='page' href='#section-home'><i class="fa-solid fa-house"></i></a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='#section-about'><i class="fa-solid fa-user"></i></a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='#section-projects'><i class="fa-solid fa-list"></i></a>
-              </li>
-              <li className='nav-item'>
-                <a className='nav-link' href='#section-contact'><i class="fa-solid fa-address-card"></i></a>
-              </li>
-            </ul>
-          </nav>
+            <nav className='navbar'>
+              <ul className='nav'>
+                <li className='nav-item'>
+                  <a className='nav-link' aria-current='page' href='#section-home'><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#section-about'><i class="fa-solid fa-user"></i></a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#section-projects'><i class="fa-solid fa-list"></i></a>
+                </li>
+                <li className='nav-item'>
+                  <a className='nav-link' href='#section-contact'><i class="fa-solid fa-address-card"></i></a>
+                </li>
+              </ul>
+            </nav>
           </div>
+
+          <button onClick={switchTheme} className='switchButton'>
+            {theme === 'light' ? 'Dark' : 'Light'}
+          </button>
         </aside>
 
         {/* MAIN CONTENT */}
@@ -75,7 +88,6 @@ function App() {
             <div className='row row-cols-1 row-cols-md-3'>
               <div className='col mb-3'>
                 <div className='card h-100 card border-success mb-3'>
-                  {/* <div className='card-header'>Header</div> */}
                   <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                     <div>
                       <i className='fa-brands fa-css3-alt'></i>
@@ -90,7 +102,6 @@ function App() {
               </div>
               <div className='col mb-3'>
                 <div className='card h-100 card border-success mb-3'>
-                  {/* <div className='card-header'>Header</div> */}
                   <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                     <div>
                       <i className='fa-brands fa-square-js'></i>
@@ -105,7 +116,6 @@ function App() {
               </div>
               <div className='col mb-3'>
                 <div className='card h-100 card border-success mb-3'>
-                  {/* <div className='card-header'>Header</div> */}
                   <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                     <div>
                       <i className='fa-brands fa-java'></i>
@@ -116,7 +126,6 @@ function App() {
               </div>
               <div className='col mb-3'>
                 <div className='card h-100 card border-success mb-3'>
-                  {/* <div className='card-header'>Header</div> */}
                   <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                     <div>
                       <i className='fa-brands fa-php'></i>
@@ -127,7 +136,6 @@ function App() {
               </div>
               <div className='col mb-3'>
                 <div className='card h-100 card border-success mb-3'>
-                  {/* <div className='card-header'>Header</div> */}
                   <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                     <div>
                       <i className='fa-solid fa-database'></i>
@@ -138,7 +146,6 @@ function App() {
               </div>
               <div className='col mb-3'>
                 <div className='card h-100 card border-success mb-3'>
-                  {/* <div className='card-header'>Header</div> */}
                   <div className='card-body d-flex flex-column justify-content-center align-items-center'>
                     <div>
                       <i className='fa-brands fa-jira'></i>
@@ -239,7 +246,8 @@ function App() {
           <div className='section-contact' id='section-contact'>
             <h1 className='display-4'><strong>CONTACT ME</strong></h1>
             <p><small><i class='fa-solid fa-envelope'></i>Email: <a href='mailto:ctth1302@gmail.com'>ctth1302@gmail.com</a></small></p>
-            <p><small><i class='fa-brands fa-linkedin'></i>LinkedIn: <a href='https://www.linkedin.com/in/hangchung/'>my profile</a></small></p>
+            <p><small><i class='fa-brands fa-linkedin'></i>LinkedIn: <a href='https://www.linkedin.com/in/hangchung/'>My Profile</a></small></p>
+            <p><small><i class="fa-brands fa-square-github"></i>Github: <a href='https://github.com/ctth1302'>My Repositories</a></small></p>
           </div>
         </div>
       </div>
