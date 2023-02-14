@@ -4,14 +4,15 @@ import ResumeDownload from './download';
 function App() {
   return (
     <main>
-      <div className='d-flex mt-5 mobile-view'>
+      <div className='d-flex main-body mobile-view'>
         {/* PROFILE & MENU */}        
-        <aside className='col-12 col-lg-3 mt-5 d-flex align-items-center text-center' id='sideMenu'>
+        <aside className='col-12 col-lg-3 d-flex align-items-center text-center' id='sideMenu'>
           <div className='profile'>
             <a href='/'><img src='./fav.png' alt='' /></a>
             <a href='/'><h1 className='display-5'>HANG CHUNG</h1></a>
             <h3>WEB DEVELOPER</h3>
           </div>
+          <div className='navbar-desktop'>
           <nav className='navbar'>
             <ul className='nav'>
               <li className='nav-item'>
@@ -28,10 +29,30 @@ function App() {
               </li>
             </ul>
           </nav>
+          </div>
+
+          <div className='navbar-mobile'>
+          <nav className='navbar'>
+            <ul className='nav'>
+              <li className='nav-item'>
+                <a className='nav-link' aria-current='page' href='#section-home'><i class="fa-solid fa-house"></i></a>
+              </li>
+              <li className='nav-item'>
+                <a className='nav-link' href='#section-about'><i class="fa-solid fa-user"></i></a>
+              </li>
+              <li className='nav-item'>
+                <a className='nav-link' href='#section-projects'><i class="fa-solid fa-list"></i></a>
+              </li>
+              <li className='nav-item'>
+                <a className='nav-link' href='#section-contact'><i class="fa-solid fa-address-card"></i></a>
+              </li>
+            </ul>
+          </nav>
+          </div>
         </aside>
 
         {/* MAIN CONTENT */}
-        <div className='col-12 col-lg-9 mt-5'>
+        <div className='col-12 col-lg-9'>
           <div className='section-home d-flex align-items-center justify-content-between' id='section-home'>
             <div className='introduction col-12 col-lg-6'>
               <h1 className='display-4'><strong>HELLO!</strong></h1>
@@ -133,7 +154,7 @@ function App() {
             <div className='container-fluid'>
               <div className='row row-cols-1 mb-3 border border-success'>
                 <div className='col border-bottom border-success'>
-                  <p><strong>Portfolio Website</strong></p>
+                  <p><strong>Portfolio Website - This Project</strong></p>
                 </div>
                 <div className='col'>
                   <p><small>URL: <a href='https://ctth1302.github.io/my-portfolio/'>Hang's Portfolio</a></small></p>
@@ -145,7 +166,7 @@ function App() {
                   <p><small>Description: A personal website showcasing my skills, projects, and experiences</small></p>
                 </div>
                 <div className='col'>
-                  <p><small>Technologies: HTML, CSS, Bootstrap, JavaScript, React</small></p>
+                  <p><small>Technologies: HTML, CSS, Bootstrap, JavaScript, React, Github</small></p>
                 </div>
               </div>
               <div className='row row-cols-1 mb-3 border border-success'>

@@ -30,9 +30,16 @@ h1 {
   padding-top: 15px;
 }
 
+.main-body {
+  margin-top: 3rem;
+}
+
 /*===================
 * PROFILE & MENU
 * ==================*/
+.navbar-mobile {
+  display: none;
+}
 
 aside {
   height: fit-content;
@@ -127,12 +134,9 @@ i {
 @media only screen and (max-width: 768px) {
   .mobile-view {
     flex-direction: column;
+    margin-top: 0;
   }
-
-  body {
-    font-size: 1.5rem;
-  }
-
+  
   aside, .nav {
     flex-direction: row;
   }
@@ -149,6 +153,10 @@ i {
     display: none;
   }
 
+  .profile h1 {
+    font-size: 2rem;
+  }
+
   .section-home,
   .section-about,
   .section-projects,
@@ -157,23 +165,31 @@ i {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  aside {
-    justify-content: center;
+@media only screen and (max-width: 425px) {
+  body {
+    font-size: 1.5rem;
   }
-  
+
+  .navbar-desktop {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: block;
+  }
+     
   .section-home {
     flex-direction: column;
+  }
+
+  .profile {
+    margin: 0;
   }
 
   .profile h1 {
     margin-bottom: 0;
     padding-top: 0;
-  }
-
-  .profile h1, .nav a {
-    font-size: 1rem;
-  }
+  } 
   
   .nav-link {
     padding: 0.5rem;
