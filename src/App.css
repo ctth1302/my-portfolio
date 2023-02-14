@@ -209,5 +209,14 @@ i {
   
   .nav-link {
     padding: 0.5rem;
+    max-width: 35px;
+  }
+
+  .navbar {
+    padding: 0.5rem, 0;
+  }
+
+  .switchButton {
+    font-size: 1rem;
   }
 }
