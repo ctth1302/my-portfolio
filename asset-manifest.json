@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.afdedece.css",
-    "main.js": "/my-portfolio/static/js/main.c394a82b.js",
+    "main.css": "/my-portfolio/static/css/main.46b0162c.css",
+    "main.js": "/my-portfolio/static/js/main.24fcce52.js",
     "static/js/787.128fc6e9.chunk.js": "/my-portfolio/static/js/787.128fc6e9.chunk.js",
     "static/media/cutivemono-regular-webfont.woff": "/my-portfolio/static/media/cutivemono-regular-webfont.0fd7cc49c4d7a61350b6.woff",
     "static/media/cutivemono-regular-webfont.woff2": "/my-portfolio/static/media/cutivemono-regular-webfont.d2e866f5a3db33034a67.woff2",
     "index.html": "/my-portfolio/index.html",
-    "main.afdedece.css.map": "/my-portfolio/static/css/main.afdedece.css.map",
-    "main.c394a82b.js.map": "/my-portfolio/static/js/main.c394a82b.js.map",
+    "main.46b0162c.css.map": "/my-portfolio/static/css/main.46b0162c.css.map",
+    "main.24fcce52.js.map": "/my-portfolio/static/js/main.24fcce52.js.map",
     "787.128fc6e9.chunk.js.map": "/my-portfolio/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.afdedece.css",
-    "static/js/main.c394a82b.js"
+    "static/css/main.46b0162c.css",
+    "static/js/main.24fcce52.js"
   ]
 }
