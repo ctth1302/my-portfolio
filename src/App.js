@@ -8,8 +8,8 @@ function App() {
         {/* PROFILE & MENU */}        
         <aside className='col-12 col-lg-3 d-flex align-items-center text-center' id='sideMenu'>
           <div className='profile'>
-            <a href='/'><img src='./fav.png' alt='' /></a>
-            <a href='/'><h1 className='display-5'>HANG CHUNG</h1></a>
+            <a href='https://ctth1302.github.io/my-portfolio/'><img src='./fav.png' alt='' /></a>
+            <a href='https://ctth1302.github.io/my-portfolio/'><h1 className='display-5'>HANG CHUNG</h1></a>
             <h3>WEB DEVELOPER</h3>
           </div>
           <div className='navbar-desktop'>
