@@ -12,8 +12,8 @@ function App() {
   }
 
   return (
-    <main>
-      <div className='d-flex main-body mobile-view' data-theme={theme}>
+    <main data-theme={theme}>
+      <div className='d-flex main-body mobile-view'>
         {/* PROFILE & MENU */}
         <aside className='col-12 col-lg-3 d-flex align-items-center text-center' id='sideMenu'>
           <div className='profile'>
@@ -65,7 +65,7 @@ function App() {
         </aside>
 
         {/* MAIN CONTENT */}
-        <div className='col-12 col-lg-9'>
+        <div className='col-12 col-lg-9 main-content'>
           <div className='section-home d-flex align-items-center justify-content-between' id='section-home'>
             <div className='introduction col-12 col-lg-6'>
               <h1 className='display-4'><strong>HELLO!</strong></h1>

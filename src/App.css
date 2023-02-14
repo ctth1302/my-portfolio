@@ -30,11 +30,9 @@ h1 {
   padding-top: 15px;
 }
 
-.main-body {
-  margin-top: 3rem;
-}
-
-.main-body, .card, .button {
+.main-body,
+.card,
+.button {
   color: var(--text-primary);
   background-color: var(--background);
   transition: all .5s;
@@ -58,7 +56,8 @@ aside {
   top: 0;
 }
 
-.nav, aside {
+.nav,
+aside {
   flex-direction: column;
 }
 
@@ -95,11 +94,19 @@ a:hover,
 * MAIN CONTENT
 * ==================*/
 
+aside, .main-content,
 .section-home,
 .section-about,
 .section-projects,
 .section-contact {
-  padding-bottom: 100px;
+  margin-top: 5rem;
+}
+
+.section-home,
+.section-about,
+.section-projects,
+.section-contact {
+  padding-bottom: 3rem;
   padding-right: 50px;
 }
 
@@ -147,8 +154,9 @@ i {
     flex-direction: column;
     margin-top: 0;
   }
-  
-  aside, .nav {
+
+  aside,
+  .nav {
     flex-direction: row;
   }
 
@@ -157,6 +165,7 @@ i {
     background-color: #7DA190;
     opacity: 1;
     z-index: 13;
+    margin-top: 0;
   }
 
   .navbar-desktop {
@@ -191,8 +200,8 @@ i {
 @media only screen and (max-width: 425px) {
   body {
     font-size: 1.5rem;
-  }  
-     
+  }
+
   .section-home {
     flex-direction: column;
   }
@@ -205,8 +214,8 @@ i {
     margin-bottom: 0;
     padding-top: 0;
     font-size: 1rem;
-  } 
-  
+  }
+
   .nav-link {
     padding: 0.5rem;
     max-width: 35px;
