@@ -221,7 +221,7 @@ function App() {
                   <p><strong>University's Project</strong></p>
                 </div>
                 <div className='col'>
-                  <p><small>URL: <a href='/'>A content management system for an e-commerce website</a></small></p>
+                  <p><small>URL: A content management system for an e-commerce website</small></p>
                 </div>
                 <div className='col'>
                   <img src='./imgs/uni_admin.png' alt='' />
