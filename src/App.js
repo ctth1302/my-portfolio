@@ -19,7 +19,7 @@ function App() {
           <div className='profile'>
             <a href='https://ctth1302.github.io/my-portfolio/'><img src='./fav.png' alt='' /></a>
             <a href='https://ctth1302.github.io/my-portfolio/'><h1 className='display-5'>HANG CHUNG</h1></a>
-            <h3>WEB DEVELOPER</h3>
+            <h3>REACT DEVELOPER</h3>
           </div>
           <div className='navbar-desktop'>
             <nav className='navbar'>
@@ -70,7 +70,7 @@ function App() {
             <div className='introduction col-12 col-lg-6'>
               <h1 className='display-4'><strong>HELLO!</strong></h1>
               <h1 className='display-4'><strong>I AM HANG</strong></h1>
-              <p>A recent graduate in the field of computer science with a strong background in business.</p>
+              <p>A React developer with a strong background in business and a passion for creating dynamic and engaging user interfaces.</p>
               <div>
                 <ResumeDownload />
               </div>
@@ -81,9 +81,9 @@ function App() {
           </div>
           <div className='section-about' id='section-about'>
             <h1 className='display-4'><strong>ABOUT ME</strong></h1>
-            <p><small>As a recent graduate in the field of computer science and with a background in business, I bring a unique perspective to the world of web development. After recognizing my passion for technology and problem-solving, I made the switch to pursue a career in web development focusing on becoming a full-stack developer.</small></p>
-            <p><small>My background in business has given me a strong understanding of the importance of delivering practical solutions that meet the needs of the user. Currently I have been continuously expanding my skills and knowledge in front-end hands-on experience in HTML, CSS, JavaScript, and React. With hands-on experience in building and deploying dynamic web applications, I am confident in my ability to create user-friendly and visually appealing websites.</small></p>
-            <p><small>Additionally, I am constantly seeking to expand my skillset and stay up to date with the latest industry trends and technologies. I am a quick learner, a team player and I have a strong work ethic. I am excited to bring my skills, passion, and business acumen to a company where I can contribute to the development of high-quality web applications and help drive business success.</small></p>
+            <p><small> I am a React developer focusing on becoming a full-stack developer who has transitioned to the tech industry from a business background. I am passionate about using technology to create meaningful solutions that make a positive impact on people's lives.</small></p>
+            <p><small>My experience in business has given me a unique perspective and skillset that I bring to my development work. I understand the importance of user experience and how it can impact business success. Currently I have been continuously expanding my skills and knowledge in front-end hands-on experience in HTML, CSS, JavaScript, and React. With hands-on experience in building and deploying dynamic web applications, I am confident in my ability to create user-friendly and visually appealing websites.</small></p>
+            <p><small>Additionally, I am constantly seeking to expand my skillset and stay up to date with the latest industry trends and technologies. I am a quick learner, a team player and I have a strong work ethic. I am dedicated to delivering high-quality work and exceeding the expectations of my clients. If you are interested in working with me or have a project you would like to discuss, please don't hesitate to reach out. Thank you for taking the time to visit my portfolio website!</small></p>
             <h1 className='display-4'><strong>SKILLS</strong></h1>
             <div className='row row-cols-1 row-cols-md-3'>
               <div className='col mb-3'>
