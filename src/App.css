@@ -7,7 +7,6 @@
     url('/public/fonts/cutivemono-regular-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-
 }
 
 body {
@@ -35,12 +34,12 @@ h1 {
 .button {
   color: var(--text-primary);
   background-color: var(--background);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 a {
   color: var(--text-primary);
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 /*===================
@@ -94,7 +93,8 @@ a:hover,
 * MAIN CONTENT
 * ==================*/
 
-aside, .main-content,
+aside,
+.main-content,
 .section-home,
 .section-about,
 .section-projects,
@@ -146,6 +146,10 @@ i {
   padding-left: 20px;
 }
 
+svg {
+  margin-bottom: 80px;
+}
+
 /*===================
 * MOBILE
 * ==================*/
@@ -162,7 +166,7 @@ i {
 
   aside {
     justify-content: space-between;
-    background-color: #7DA190;
+    background-color: #7da190;
     opacity: 1;
     z-index: 13;
     margin-top: 0;

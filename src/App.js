@@ -1,254 +1,112 @@
 import './App.css';
-import ResumeDownload from './download';
 import useLocalStorage from 'use-local-storage';
+import Projects from './pages/projects';
+import Contact from './pages/contact';
+import About from './pages/about';
+import Home from './pages/home';
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  const [theme, setTheme] = useLocalStorage(
+    'theme',
+    defaultDark ? 'dark' : 'light'
+  );
 
   const switchTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-  }
+  };
 
   return (
     <main data-theme={theme}>
-      <div className='d-flex main-body mobile-view'>
+      <div className="d-flex main-body mobile-view">
         {/* PROFILE & MENU */}
-        <aside className='col-12 col-lg-3 d-flex align-items-center text-center' id='sideMenu'>
-          <div className='profile'>
-            <a href='https://ctth1302.github.io/my-portfolio/'><img src='./fav.png' alt='' /></a>
-            <a href='https://ctth1302.github.io/my-portfolio/'><h1 className='display-5'>HANG CHUNG</h1></a>
+        <aside
+          className="col-12 col-lg-3 d-flex align-items-center text-center"
+          id="sideMenu"
+        >
+          <div className="profile">
+            <a href="https://ctth1302.github.io/my-portfolio/">
+              <img src="./fav.png" alt="" />
+            </a>
+            <a href="https://ctth1302.github.io/my-portfolio/">
+              <h1 className="display-5">HANG CHUNG</h1>
+            </a>
             <h3>REACT DEVELOPER</h3>
           </div>
-          <div className='navbar-desktop'>
-            <nav className='navbar'>
-              <ul className='nav'>
-                <li className='nav-item'>
-                  <a className='nav-link' aria-current='page' href='#section-home'>Home</a>
+          <div className="navbar-desktop">
+            <nav className="navbar">
+              <ul className="nav">
+                <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    aria-current="page"
+                    href="#section-home"
+                  >
+                    Home
+                  </a>
                 </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#section-about'>About Me</a>
+                <li className="nav-item">
+                  <a className="nav-link" href="#section-about">
+                    About Me
+                  </a>
                 </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#section-projects'>Projects</a>
+                <li className="nav-item">
+                  <a className="nav-link" href="#section-projects">
+                    Projects
+                  </a>
                 </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#section-contact'>Contact Me</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div className='navbar-mobile'>
-            <nav className='navbar'>
-              <ul className='nav'>
-                <li className='nav-item'>
-                  <a className='nav-link' aria-current='page' href='#section-home'><i class="fa-solid fa-house"></i></a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#section-about'><i class="fa-solid fa-user"></i></a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#section-projects'><i class="fa-solid fa-list"></i></a>
-                </li>
-                <li className='nav-item'>
-                  <a className='nav-link' href='#section-contact'><i class="fa-solid fa-address-card"></i></a>
+                <li className="nav-item">
+                  <a className="nav-link" href="#section-contact">
+                    Contact Me
+                  </a>
                 </li>
               </ul>
             </nav>
           </div>
 
-          <button onClick={switchTheme} className='switchButton'>
+          <div className="navbar-mobile">
+            <nav className="navbar">
+              <ul className="nav">
+                <li className="nav-item">
+                  <a
+                    className="nav-link"
+                    aria-current="page"
+                    href="#section-home"
+                  >
+                    <i class="fa-solid fa-house"></i>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#section-about">
+                    <i class="fa-solid fa-user"></i>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#section-projects">
+                    <i class="fa-solid fa-list"></i>
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#section-contact">
+                    <i class="fa-solid fa-address-card"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <button onClick={switchTheme} className="switchButton">
             {theme === 'light' ? 'Dark' : 'Light'}
           </button>
         </aside>
 
         {/* MAIN CONTENT */}
-        <div className='col-12 col-lg-9 main-content'>
-          <div className='section-home d-flex align-items-center justify-content-between' id='section-home'>
-            <div className='introduction col-12 col-lg-6'>
-              <h1 className='display-4'><strong>HELLO!</strong></h1>
-              <h1 className='display-4'><strong>I AM HANG</strong></h1>
-              <p>A React developer with a strong background in business and a passion for creating dynamic and engaging user interfaces.</p>
-              <div>
-                <ResumeDownload />
-              </div>
-            </div>
-            <div className='about-img'>
-              <img src='./imgs/Subject.png' alt='' />
-            </div>
-          </div>
-          <div className='section-about' id='section-about'>
-            <h1 className='display-4'><strong>ABOUT ME</strong></h1>
-            <p><small> I am a React developer focusing on becoming a full-stack developer who has transitioned to the tech industry from a business background. I am passionate about using technology to create meaningful solutions that make a positive impact on people's lives.</small></p>
-            <p><small>My experience in business has given me a unique perspective and skillset that I bring to my development work. I understand the importance of user experience and how it can impact business success. Currently I have been continuously expanding my skills and knowledge in front-end hands-on experience in HTML, CSS, JavaScript, and React. With hands-on experience in building and deploying dynamic web applications, I am confident in my ability to create user-friendly and visually appealing websites.</small></p>
-            <p><small>Additionally, I am constantly seeking to expand my skillset and stay up to date with the latest industry trends and technologies. I am a quick learner, a team player and I have a strong work ethic. I am dedicated to delivering high-quality work and exceeding the expectations of my clients. If you are interested in working with me or have a project you would like to discuss, please don't hesitate to reach out. Thank you for taking the time to visit my portfolio website!</small></p>
-            <h1 className='display-4'><strong>SKILLS</strong></h1>
-            <div className='row row-cols-1 row-cols-md-3'>
-              <div className='col mb-3'>
-                <div className='card h-100 card border-success mb-3'>
-                  <div className='card-body d-flex flex-column justify-content-center align-items-center'>
-                    <div>
-                      <i className='fa-brands fa-css3-alt'></i>
-                      <span>CSS</span>
-                    </div>
-                    <div>
-                      <i className='fa-brands fa-bootstrap'></i>
-                      <span>Bootstrap</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='col mb-3'>
-                <div className='card h-100 card border-success mb-3'>
-                  <div className='card-body d-flex flex-column justify-content-center align-items-center'>
-                    <div>
-                      <i className='fa-brands fa-square-js'></i>
-                      <span>JavaScript</span>
-                    </div>
-                    <div>
-                      <i className='fa-brands fa-react'></i>
-                      <span>ReactJS</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='col mb-3'>
-                <div className='card h-100 card border-success mb-3'>
-                  <div className='card-body d-flex flex-column justify-content-center align-items-center'>
-                    <div>
-                      <i className='fa-brands fa-java'></i>
-                      <span>Java</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='col mb-3'>
-                <div className='card h-100 card border-success mb-3'>
-                  <div className='card-body d-flex flex-column justify-content-center align-items-center'>
-                    <div>
-                      <i className='fa-brands fa-php'></i>
-                      <span>PHP</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='col mb-3'>
-                <div className='card h-100 card border-success mb-3'>
-                  <div className='card-body d-flex flex-column justify-content-center align-items-center'>
-                    <div>
-                      <i className='fa-solid fa-database'></i>
-                      <span>MySQL</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='col mb-3'>
-                <div className='card h-100 card border-success mb-3'>
-                  <div className='card-body d-flex flex-column justify-content-center align-items-center'>
-                    <div>
-                      <i className='fa-brands fa-jira'></i>
-                      <span>Jira</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='section-projects' id='section-projects'>
-            <h1 className='display-4'><strong>PROJECTS</strong></h1>
-            <div className='container-fluid'>
-              <div className='row row-cols-1 mb-3 border border-success'>
-                <div className='col border-bottom border-success'>
-                  <p><strong>Portfolio Website - This Project</strong></p>
-                </div>
-                <div className='col'>
-                  <p><small>URL: <a href='https://ctth1302.github.io/my-portfolio/'>Hang's Portfolio</a></small></p>
-                </div>
-                <div className='col'>
-                  <img src='./imgs/myPortfolio.png' alt='' />
-                </div>
-                <div className='col'>
-                  <p><small>Description: A personal website showcasing my skills, projects, and experiences</small></p>
-                </div>
-                <div className='col'>
-                  <p><small>Technologies: HTML, CSS, Bootstrap, JavaScript, React, Github</small></p>
-                </div>
-              </div>
-              <div className='row row-cols-1 mb-3 border border-success'>
-                <div className='col border-bottom border-success'>
-                  <p><strong>Immigration Website</strong></p>
-                </div>
-                <div className='col'>
-                  <p><small>URL: <a href='https://www.tbmango.com.au'>TBMango Pty Ltd</a></small></p>
-                </div>
-                <div className='col'>
-                  <img src='./imgs/TBMango.png' alt='' />
-                </div>
-                <div className='col'>
-                  <p><small>Description: A website for an immigration services company to offer a self immigration point calculator and to collect its client's information before consultation, utilizing Wix platform and Velo's APIs including:
-                    <li><a href='https://www.wix.com/velo/reference/$w'>Wix Editor Elements ($w)</a></li>
-                    <li><a href='https://www.wix.com/velo/reference/wix-crm'>wix-crm</a></li>
-                    <li><a href='https://www.wix.com/velo/reference/wix-dataset'>wix-dataset</a></li>
-                    <li><a href='https://www.wix.com/velo/reference/wix-members'>wix-members</a></li>
-                    <li><a href='https://www.wix.com/velo/reference/wix-bookings'>wix-bookings</a></li>
-                  </small></p>
-                </div>
-                <div className='col'>
-                  <p><small>Technologies: Wix, Velo's APIs</small></p>
-                </div>
-              </div>
-              <div className='row row-cols-1 mb-3 border border-success'>
-                <div className='col border-bottom border-success'>
-                  <p><strong>E-Commerce Website</strong></p>
-                </div>
-                <div className='col'>
-                  <p><small>URL: <a href='https://4bio.com.au/'>4BIO Shop</a></small></p>
-                </div>
-                <div className='col'>
-                  <img src='./imgs/4bio.png' alt='' />
-                </div>
-                <div className='col'>
-                  <p><small>Description: A e-commerce platform for environmental friendly brands to offer their products to end users, built using Shopify</small></p>
-                </div>
-                <div className='col'>
-                  <p><small>Technologies: Shopify, Liquid, CSS</small></p>
-                </div>
-              </div>
-              <div className='row row-cols-1 mb-3 border border-success'>
-                <div className='col border-bottom border-success'>
-                  <p><strong>University's Project</strong></p>
-                </div>
-                <div className='col'>
-                  <p><small>URL: A content management system for an e-commerce website</small></p>
-                </div>
-                <div className='col'>
-                  <img src='./imgs/uni_admin.png' alt='' />
-                  <img src='./imgs/uni_manager.png' alt='' />
-                </div>
-                <div className='col'>
-                  <p><small>Project's Requirements:
-                    <li>Build a website, with an authenticated login, where employees with a role of either administrator or manager can manage their web content.</li>
-                    <li>Develop a page design and use cases to guide the development of a web based content management system.</li>
-                    <li>Provide pages whereby authorised manager users can add, edit and remove data that is used to populate the e-commerce webpages.</li>
-                    <li>Provide pages where authorised administrator users can add, edit and remove users of the content management system.</li>
-                    <li>Provide a function to automatically log all changes.</li>
-                    <li>Provide a function to allow a manager user to report on all changes.</li>
-                  </small></p>
-                </div>
-                <div className='col'>
-                  <p><small>Technologies: HTML, CSS, Bootstrap, JavaScript, PHP, MySQL</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='section-contact' id='section-contact'>
-            <h1 className='display-4'><strong>CONTACT ME</strong></h1>
-            <p><small><i class='fa-solid fa-envelope'></i>Email: <a href='mailto:ctth1302@gmail.com'>ctth1302@gmail.com</a></small></p>
-            <p><small><i class='fa-brands fa-linkedin'></i>LinkedIn: <a href='https://www.linkedin.com/in/hangchung/'>My Profile</a></small></p>
-            <p><small><i class="fa-brands fa-square-github"></i>Github: <a href='https://github.com/ctth1302'>My Repositories</a></small></p>
-          </div>
+        <div className="col-12 col-lg-9 main-content">
+          <Home></Home>
+          <About></About>
+          <Projects></Projects>
+          <Contact></Contact>
         </div>
       </div>
     </main>
