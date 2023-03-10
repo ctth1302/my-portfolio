@@ -8,18 +8,18 @@ const Projects = () => {
         <div className="row row-cols-1 mb-3 border border-success">
           <div className="col border-bottom border-success">
             <p>
-              <strong>Portfolio Website - This Project</strong>
+              <strong>Portfolio Website - This Project - React</strong>
             </p>
           </div>
           <div className="col">
-            <p>
+            <div>
               <small>
                 URL:{' '}
                 <a href="https://ctth1302.github.io/my-portfolio/">
-                  Hang's Portfolio
+                  Hang&#39;s Portfolio using React
                 </a>
               </small>
-            </p>
+            </div>
           </div>
           <div className="col">
             <img src="./imgs/myPortfolio.png" alt="" />
@@ -36,6 +36,41 @@ const Projects = () => {
             <p>
               <small>
                 Technologies: HTML, CSS, Bootstrap, JavaScript, React, GitHub
+              </small>
+            </p>
+          </div>
+        </div>
+        <div className="row row-cols-1 mb-3 border border-success">
+          <div className="col border-bottom border-success">
+            <p>
+              <strong>Portfolio Website - NextJS</strong>
+            </p>
+          </div>
+          <div className="col">
+            <p>
+              <small>
+                URL:{' '}
+                <a href="nextjs-my-portfolio-ctth1302.vercel.app">
+                  Hang's Portfolio using NextJS
+                </a>
+              </small>
+            </p>
+          </div>
+          <div className="col">
+            <img src="./imgs/myPortfolio-next.png" alt="" />
+          </div>
+          <div className="col">
+            <p>
+              <small>
+                Description: A personal website converting from React to NextJS
+              </small>
+            </p>
+          </div>
+          <div className="col">
+            <p>
+              <small>
+                Technologies: HTML, CSS, Bootstrap, JavaScript, React, NextJS,
+                GitHub
               </small>
             </p>
           </div>
