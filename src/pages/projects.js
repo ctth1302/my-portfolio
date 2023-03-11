@@ -50,7 +50,7 @@ const Projects = () => {
             <p>
               <small>
                 URL:{' '}
-                <a href="nextjs-my-portfolio-ctth1302.vercel.app">
+                <a href="https://nextjs-my-portfolio-ctth1302.vercel.app">
                   Hang's Portfolio using NextJS
                 </a>
               </small>
